@@ -16,3 +16,16 @@ function theme_script_unqueue(){
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_script_unqueue' );
+
+function theme_setup() {
+	
+	add_theme_support('menus');
+	
+	$locations = array(
+		'primary'  => __( 'Desktop Horizontal Menu', 'theme' ),
+		'footer'   => __( 'Footer Menu', 'theme' ),
+	);
+
+	register_nav_menus( $locations );
+}
+add_action('init', 'theme_setup');
