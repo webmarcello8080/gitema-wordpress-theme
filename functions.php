@@ -29,3 +29,5 @@ function teogina_setup() {
 	register_nav_menus( $locations );
 }
 add_action('init', 'teogina_setup');
+
+add_theme_support('custom-background');
