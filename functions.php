@@ -31,3 +31,4 @@ function teogina_setup() {
 add_action('init', 'teogina_setup');
 
 add_theme_support('custom-background');
+add_theme_support('post-thumbnails');
