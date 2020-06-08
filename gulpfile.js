@@ -14,7 +14,7 @@ function style() {
 function watch() {
   browserSync.init({
     // server: {},
-    proxy: "http://localhost:8888/marginateo/",
+    proxy: "http://localhost/wordpress.5.3.2/",
     notify: true,
   });
   gulp.watch("./assets/scss/**/*.scss", style);

@@ -1,7 +1,7 @@
 <?php
-if ( !class_exists( 'TeoginaAdmin' ) ) {
+if ( !class_exists( 'GitemaAdmin' ) ) {
 
-    class TeoginaAdmin {
+    class GitemaAdmin {
 
         public function __construct(){
             // Set menu on admin area
@@ -24,28 +24,28 @@ if ( !class_exists( 'TeoginaAdmin' ) ) {
         public function adminMenu() {
 
             add_menu_page(
-                'Teogina', 
-                'Teogina', 
+                'Gitema Theme Options', 
+                'Gitema', 
                 'manage_options', 
-                'teogina_theme', 
+                'gitema_theme', 
                 array( $this, 'adminPage' ), 
-                'dashicons-wordpress-alt', 
+                'dashicons-money', 
                 90
             );
             
             add_submenu_page(
-                'teogina_theme',
-                'Teogina Settings', 
-                'Teogina Settings', 
+                'gitema_theme',
+                'Gitema Theme Options', 
+                'Settings', 
                 'manage_options',
-                'teogina_theme_settings',
+                'gitema_theme_settings',
                 array( $this, 'adminSettingsPage' )
             ); 
         }
 
         public function adminPage() {
             //show the form
-            include_once( TEOGINA_PATH . '/views/admin-form.php' );
+            include_once( GITEMA_PATH . '/views/admin-form.php' );
         }
 
         /*
@@ -75,8 +75,8 @@ if ( !class_exists( 'TeoginaAdmin' ) ) {
             add_theme_support('menus');
             
             $locations = array(
-                'primary'  => __( 'Desktop Horizontal Menu', 'theme' ),
-                'footer'   => __( 'Footer Menu', 'theme' ),
+                'primary'  => __( 'Desktop Horizontal Menu', 'gitema' ),
+                'footer'   => __( 'Footer Menu', 'teogina' ),
             );
 
             register_nav_menus( $locations );
