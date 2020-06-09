@@ -43,8 +43,10 @@ if ( !class_exists( 'GitemaAdmin' ) ) {
             ); 
         }
 
+        /*
+        * redirect to view page
+        */
         public function adminPage() {
-            //show the form
             include_once( GITEMA_PATH . '/views/admin-form.php' );
         }
 
