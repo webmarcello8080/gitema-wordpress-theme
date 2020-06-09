@@ -1,0 +1,28 @@
+/*========================
+  Media queries mixins
+  ========================*/
+
+  $sm-mobile: 320px;
+  $mobile: 480px;
+  $lg-mobile-width: 640px;
+  $tablet-width: 768px;
+  $desktop-width: 1024px;
+  $wide-with: 1440px;
+  
+  @mixin mobile {
+    @media ( max-width: #{$tablet-width - 1px} ) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
