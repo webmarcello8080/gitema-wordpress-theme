@@ -10,12 +10,12 @@
         <table class="form-table">
             <tr valign="top">
             <th scope="row">Activate "Title" html tag on head:</th>
-            <td><input type="checkbox" name="gitema_active_title" value="1" <?= (get_option('gitema_active_titles') == 1 ? 'checked' : '');?> /></td>
+            <td><input type="checkbox" name="gitema_active_title" value="1" <?= (get_option('gitema_active_title') == 1 ? 'checked' : '');?> /></td>
             </tr>
             
             <tr valign="top">
             <th scope="row">Activate "Meta Description" html tag on head:</th>
-            <td><input type="checkbox" name="gitema_active_metadescription" value="1" <?= (get_option('gitema_active_metadescriptions') == 1 ? 'checked' : '');?> /></td>
+            <td><input type="checkbox" name="gitema_active_metadescription" value="1" <?= (get_option('gitema_active_metadescription') == 1 ? 'checked' : '');?> /></td>
             </tr>
             
         </table>
