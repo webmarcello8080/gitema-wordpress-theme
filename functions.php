@@ -13,5 +13,5 @@ foreach ( glob( GITEMA_PATH .'/classes/*.php') as $filename)
 {
     include_once $filename;
 }
-$GitemaAdmin = new GitemaAdmin;
+new GitemaAdmin;
 

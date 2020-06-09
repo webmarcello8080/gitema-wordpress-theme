@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?= GitemaSeo::gitemaTitle(); ?></title>
-    <meta name="description" content="<?= GitemaSeo::gitemaMetaDescription(); ?>">
-
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <?php get_template_part( 'template-parts/gitema-head' ); ?>
     <?php wp_head(); ?>
 
 </head>
