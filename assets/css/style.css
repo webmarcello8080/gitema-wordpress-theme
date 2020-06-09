@@ -54,3 +54,11 @@ html {
 /*========================
   Media queries mixins
   ========================*/
+.center {
+  text-align: center; }
+
+.bold {
+  font-weight: bold; }
+
+.flex {
+  display: flex; }

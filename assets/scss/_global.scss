@@ -1,0 +1,62 @@
+$c-white: #ffffff;
+$c-gray: #c4c4c4;
+$c-light-gray: lighten($c-gray, 20%);
+$c-dark-gray: #656565;
+$c-black: #181717;
+$c-green: #48c171;
+$c-error: #d44646;
+$c-text-black: #212121;
+
+$c-dark-purple: #33327b;
+$c-purple-light: #7676a7;
+$c-purple-white: #d3d3e5; 
+
+$c-primary: $c-dark-purple;
+$c-primary-darker: darken($c-primary, 10%);
+$c-primary-lighter: lighten($c-primary, 30%);
+
+$c-secondary: $c-purple-light;
+$c-secondary-darker: darken($c-secondary, 10%);
+$c-secondary-lighter: lighten($c-secondary, 40%);
+
+$c-accent: $c-green;
+$c-accent-darker: darken($c-accent, 10%);
+$c-accent-lighter: lighten($c-accent, 30%);
+
+// $margin-xs: 1rem;
+// $margin-sm: 2rem;
+// $margin-md: 3rem;
+// $margin-lg: 4rem;
+// $margin-xl: 5rem;
+
+
+// // margin
+// .margin-xs {
+//   margin: $margin-xs;
+// }
+// .margin-sm {
+//   margin: $margin-sm;
+// }
+
+// //margin top
+// .mt-xs {
+//   margin-top: 0.5rem;
+// }
+
+// align center
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.flex{
+    display: flex;
+}
+
+// html {
+//   @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+//   font-family: "Open Sans", sans-serif;
+// }
