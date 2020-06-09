@@ -50,3 +50,7 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit; }
+
+/*========================
+  Media queries mixins
+  ========================*/
