@@ -15,8 +15,6 @@ foreach ( glob( GITEMA_PATH .'/classes/*.php') as $filename)
 }
 new GitemaAdmin;
 
-
-
 // Customize h1 tags
 function customize_h1( $wp_customize){
     $wp_customize->add_setting('gtm_h1_color', array(
