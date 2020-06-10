@@ -32,6 +32,7 @@ if ( !class_exists( 'GitemaMenu' ) ) {
             add_submenu_page( 'gitema_theme', 'Gitema Theme SEO Options', 'SEO', 'manage_options', 'gitema_theme_seo', array( $this, 'displaySeoPage' ) );
             $hook = add_submenu_page( 'gitema_theme', 'Gitema Theme Background Options', 'Background', 'manage_options', 'gitema_theme_background', array( $this, 'displayBackgroundPage' ) );
             add_action('load-' . $hook, array( $this, 'displayBackgroundPage' ) );
+            add_submenu_page( 'gitema_theme', 'Gitema Teo Form', 'Teo', 'manage_options', 'gitema_theme_teo', array( $this, 'displayTeo' ) );
         }
 
         /*
@@ -43,6 +44,10 @@ if ( !class_exists( 'GitemaMenu' ) ) {
 
         public function displaySeoPage() {
             include_once( GITEMA_PATH . '/views/admin-seo-form.php' );
+        }
+
+        public function displayTeo() {
+            include_once( GITEMA_PATH . '/views/admin-teo-form.php' );
         }
 
         public function displayBackgroundPage(){

@@ -23,7 +23,9 @@ if ( !class_exists( 'GitemaAdmin' ) ) {
             // Set hooks to activate post-thumbnails and custom-background
             add_theme_support('custom-background');
             add_theme_support('post-thumbnails');
-
+            
+            // Remove sections from Customise part
+            add_action( 'customize_register', array( $this, 'removeSections' ) );
         }
 
         /*
@@ -68,8 +70,6 @@ if ( !class_exists( 'GitemaAdmin' ) ) {
             $wp_customize->remove_section("colors");
 
         }
-
-        
 
     }
 }
