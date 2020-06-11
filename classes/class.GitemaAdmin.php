@@ -21,7 +21,7 @@ class GitemaAdmin {
         add_action( 'customize_register', array( $this, 'removeSections' ) );
         
         // Add custom logo support
-        add_action( 'after_setup_theme', 'gitema_custom_logo' );
+        add_action( 'after_setup_theme', array( $this, 'gitema_custom_logo' )  );
     }
 
     /*
