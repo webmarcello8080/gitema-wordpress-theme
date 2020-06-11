@@ -18,6 +18,9 @@ class GitemaAdmin {
         
         // Remove sections from Customise part
         add_action( 'customize_register', array( $this, 'removeSections' ) );
+        
+        // Add custom logo support
+        add_action( 'after_setup_theme', array( $this, 'gitema_custom_logo' )  );
     }
 
     /*
@@ -63,4 +66,14 @@ class GitemaAdmin {
 
     }
 
+    public function gitema_custom_logo(){
+        $defaults = array(
+            'height'=> 100,
+            'width' => 100,
+            'flex-height'=> true,
+            'flex-width' => true,
+            'header-text' => array('site-title', 'site-description'),
+        );
+        add_theme_support( 'custom-logo', $defaults );
+    }
 }

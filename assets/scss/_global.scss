@@ -9,7 +9,7 @@ $c-text-black: #212121;
 
 $c-dark-purple: #33327b;
 $c-purple-light: #7676a7;
-$c-purple-white: #d3d3e5; 
+$c-purple-white: #d3d3e5;
 
 $c-primary: $c-dark-purple;
 $c-primary-darker: darken($c-primary, 10%);
@@ -28,7 +28,6 @@ $c-accent-lighter: lighten($c-accent, 30%);
 // $margin-md: 3rem;
 // $margin-lg: 4rem;
 // $margin-xl: 5rem;
-
 
 // // margin
 // .margin-xs {
@@ -52,11 +51,17 @@ $c-accent-lighter: lighten($c-accent, 30%);
   font-weight: bold;
 }
 
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
 
 // html {
 //   @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 //   font-family: "Open Sans", sans-serif;
 // }
+
+.custom-logo {
+  cursor: pointer;
+  width: 2rem;
+  height: auto;
+}
