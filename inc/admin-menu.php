@@ -23,7 +23,7 @@ Redux::setSection($opt_name, array(
 Redux::setSection($opt_name, array(
     'title' => esc_html__('Homepage', 'gitema') ,
     'id' => esc_html__('gitema-homepage', ' gitema') ,
-    'icon' => 'el el-website'
+    'icon' => 'el el-home-alt'
     )
 );
 
@@ -37,7 +37,7 @@ Redux::setSection($opt_name, array(
 Redux::setSection($opt_name, array(
     'title' => esc_html__('Footer', 'gitema') ,
     'id' => esc_html__('gitema-footer', ' gitema') ,
-    'icon' => 'el el-arrow-down'
+    'icon' => 'el el-website'
     )
 );
 
