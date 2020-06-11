@@ -34,33 +34,3 @@ $args = array(
     'default_mark' => '',
     'show_import_export' => false
 );
-
-Redux::setSection($opt_name, array(
-    'title' => esc_html__('Seo', 'gitema') ,
-    'id' => esc_html__('giteme-seo', ' gitema') ,
-    'icon' => 'el el-home',
-    'fields' => array(
-            array(
-                'id'       => 'active_title',
-                'type'     => 'checkbox',
-                'title'    => __( 'Activate Title in head', 'gitema' ),
-                'desc'     => __( 'This is the description field, again good for additional info.', 'gitema' ),
-                'default'  => '1'// 1 = on | 0 = off
-            ),
-            array(
-                'id'       => 'active_metadescription',
-                'type'     => 'checkbox',
-                'title'    => __( 'Activate Meta Description in head', 'gitema' ),
-                'desc'     => __( 'This is the description field, again good for additional info.', 'gitema' ),
-                'default'  => '1'// 1 = on | 0 = off
-            ),
-            array(
-                'id'       => 'opt-color-title',
-                'type'     => 'color',
-                'output'   => array( '.site-title' ),
-                'title'    => __( 'Site Title Color', 'gitema' ),
-                'subtitle' => __( 'Pick a title color for the theme (default: #000).', 'gitema' ),
-                'default'  => '#000000',
-            )
-    )
-));
