@@ -7,14 +7,37 @@
 Redux::setSection($opt_name, array(
     'title' => esc_html__('General', 'gitema') ,
     'id' => esc_html__('gitema-general', ' gitema') ,
-    'icon' => 'el el-home'
+    'icon' => 'el el-home',
+    'fields' => GitemaForm::general(),
     )
 );
 
 Redux::setSection($opt_name, array(
     'title' => esc_html__('Header', 'gitema') ,
     'id' => esc_html__('gitema-header', ' gitema') ,
-    'icon' => 'el el-home-alt'
+    'icon' => 'el el-arrow-up',
+    'fields' => GitemaForm::header(),
+    )
+);
+
+Redux::setSection($opt_name, array(
+    'title' => esc_html__('Homepage', 'gitema') ,
+    'id' => esc_html__('gitema-homepage', ' gitema') ,
+    'icon' => 'el el-website'
+    )
+);
+
+Redux::setSection($opt_name, array(
+    'title' => esc_html__('Blog', 'gitema') ,
+    'id' => esc_html__('gitema-blog', ' gitema') ,
+    'icon' => 'el el-wordpress'
+    )
+);
+
+Redux::setSection($opt_name, array(
+    'title' => esc_html__('Footer', 'gitema') ,
+    'id' => esc_html__('gitema-footer', ' gitema') ,
+    'icon' => 'el el-arrow-down'
     )
 );
 
