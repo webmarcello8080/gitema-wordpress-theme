@@ -13,8 +13,7 @@ class GitemaAdmin {
         // Set menu areas
         add_action('init', array( $this, 'menuSetup' ));
 
-        // Set hooks to activate post-thumbnails and custom-background
-        add_theme_support('custom-background');
+        // Set hooks to activate post-thumbnails
         add_theme_support('post-thumbnails');
         
         // Remove sections from Customise part
