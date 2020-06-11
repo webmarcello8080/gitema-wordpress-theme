@@ -3,6 +3,9 @@
 /*
 * This class manages the Admin part of the theme in the wordpress dashboard
 */
+
+Redux::setArgs( $opt_name, $args );
+
 if ( !class_exists( 'GitemaAdmin' ) ) {
 
     class GitemaAdmin {

@@ -4,6 +4,13 @@
  * REQUIRED FILES
  * Include required files.
  */
+if (!class_exists('ReduxFramework') && file_exists( get_template_directory() . '/inc/ReduxCore/framework.php')){
+    require_once ( get_template_directory() . '/inc/ReduxCore/framework.php');
+}
+if (!isset($redux_demo) && file_exists( get_template_directory() . '/inc/ReduxCore/config.php')){
+    require_once ( get_template_directory() . '/inc/ReduxCore/config.php'); 
+}
+
 require get_template_directory() . '/inc/constants.php';
 require get_template_directory() . '/inc/unqueue-files.php';
 require get_template_directory() . '/inc/cleanup-html.php';
