@@ -54,3 +54,17 @@ function customize_css(){
 <?php }
 
 add_action('wp_head', 'customize_css');
+
+
+function gitema_custom_logo(){
+    $defaults = array(
+        'height'=> 100,
+        'width' => 100,
+        'flex-height'=> true,
+        'flex-width' => true,
+        'header-text' => array('site-title', 'site-description'),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+
+add_action( 'after_setup_theme', 'gitema_custom_logo' );
