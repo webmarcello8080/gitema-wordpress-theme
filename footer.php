@@ -1,15 +1,6 @@
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div>
-        <p>this is the footer</p>
-        <?php
-        echo $gitema['custom_logo']['url']
-        ?>
-        <img src="<?php echo $gitema['custom_logo']['url'] ?>" alt="" />
-      
-      </div>
-    </div><!-- /.container -->
+    <?php get_template_part( 'template-parts/gitema-footer' ); ?>
   </footer><!-- /footer -->
   
 <?php wp_footer(); ?>

@@ -33,7 +33,7 @@ class GitemaAdmin {
                 'name' => 'Sidebar',
                 'id' => 'sidebar-1',
                 'class' => 'sidebar-custom',
-                'description' => __( 'This is the Standard Sidebar', 'gitema' ),
+                'description' => __( 'This is the Gitema Sidebar', 'gitema' ),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</aside>',
                 'before_title'  => '<h1 class="widget-title">',

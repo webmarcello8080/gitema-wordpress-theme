@@ -12,7 +12,7 @@ thanks.
     <nav>
         <?php wp_nav_menu(array('theme_location'=>'primary')); ?>
     </nav>
-    <a class="cta" href="#">
+    <a class="cta" href="<?= $gitema['contact-button-link'] ?>">
     <button>Contact</button>
     </a>
 </header>
