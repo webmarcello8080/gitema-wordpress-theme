@@ -115,9 +115,54 @@ class GitemaForm {
                     'subtitle'     => __('If this is ON, the Contact Button appears on header.', 'gitema'),
                     'default'  => '1'// 1 = on | 0 = off
             ),
+            array(
+                    'id'       => 'contact-button-link',
+                    'type'     => 'text',
+                    'title'    => __('Contact Button Link', 'gitema'),
+                    'subtitle' => __('Where the Contact Button on header leads.', 'gitema'),
+                )
         );
 
         return $headerForm;
+    }
+
+    public static function footer(){
+
+        $footerForm = array(
+            array(
+                'id'       => 'footer-section-number',
+                'type'     => 'button_set',
+                'title'    => __('Number of sections', 'gitema'),
+                'subtitle' => __('The number of sections on the footer', 'gitema'),
+                //Must provide key => value pairs for options
+                'options' => array(
+                    '1' => '1', 
+                    '2' => '2', 
+                    '3' => '3',
+                    '4' => '4'
+                ), 
+                'default' => '4'
+            ),
+            array(
+                'id'=>'footer-copyright',
+                'type' => 'textarea',
+                'title' => __('Footer Copyright', 'gitema'), 
+                'subtitle' => __('The Footer Copyright appears on the bottom of the footer', 'gitema'),
+                'validate' => 'html_custom',
+                'default' => '© 2020 Copyright: Gitema by Marcello, Teo, Gina.',
+                'allowed_html' => array(
+                    'a' => array(
+                        'href' => array(),
+                        'title' => array()
+                    ),
+                    'br' => array(),
+                    'em' => array(),
+                    'strong' => array()
+                )
+            )
+        );
+
+        return $footerForm;
     }
 
     public static function seo(){
