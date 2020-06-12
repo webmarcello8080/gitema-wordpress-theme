@@ -42,32 +42,17 @@ Redux::setSection($opt_name, array(
 );
 
 Redux::setSection($opt_name, array(
+    'title' => esc_html__('Social Network', 'gitema') ,
+    'id' => esc_html__('gitema-social-network', ' gitema') ,
+    'icon' => 'el el-network',
+    'fields' => GitemaForm::seo(),
+    )
+);
+
+Redux::setSection($opt_name, array(
     'title' => esc_html__('SEO', 'gitema') ,
     'id' => esc_html__('gitema-seo', ' gitema') ,
     'icon' => 'el el-globe-alt',
     'fields' => GitemaForm::seo(),
     )
 );
-
-
-
-Redux::setSection($opt_name, array(
-    'id'       => 'custom_logo_section',
-    'type'     => 'section',
-    'title'    => __('Logo', 'redux-framework-demo'), 
-    'subtitle' => __('Select or upload a image for you logo', 'gitema'),
-    'desc'     => __('This image will show on your navbar', 'gitema'),
-    'icon' => 'el el-picture',
-    'fields' => array(
-        array(
-            'id'       => 'custom_logo',
-            'type'     => 'media', 
-            'library_filter' => array(
-                'jpg'
-            )
-        ),
-    )  
-    )
-);
-
-

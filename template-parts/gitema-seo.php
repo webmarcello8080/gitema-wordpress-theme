@@ -1,8 +1,9 @@
-<?php
-if( get_option('gitema_active_title') ){
-    echo '<title>' . GitemaSeo::gitemaTitle() . '</title>';
-}
+<?php global $gitema; ?>
 
-if( get_option('gitema_active_metadescription') ){
-    echo '<meta name="description" content="' . GitemaSeo::gitemaMetaDescription() . '" />';
-}
+<?php if( $gitema['seo-title'] ){ ?>
+    <title><?= GitemaSeo::gitemaTitle() ?></title>
+<?php } ?>
+
+<?php if( $gitema['seo-metadescription'] ){ ?>
+    <meta name="description" content="<?= GitemaSeo::gitemaMetaDescription() ?>" />
+<?php } ?>
