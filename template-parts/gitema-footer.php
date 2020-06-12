@@ -1,7 +1,11 @@
 <?php global $gitema; ?>
   <!-- Footer Links -->
   <div class="container">
-
+        <?php for( $i = 1; $i <= $gitema['footer-section-number']; $i++) { ?>
+            <div class="footer-section footer-section-<?= $i ?>" >
+                FOOTER-SECTION-<?= $i ?>
+            </div>
+        <?php } ?>
   </div>
   <!-- Footer Links -->
 
