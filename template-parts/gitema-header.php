@@ -1,7 +1,7 @@
 <?php global $gitema; ?>
 Teo:<br/>
-* display logo only if it's loaded, <br/>
-* then display Tagline if required, <br/>
+* display logo only if it's loaded, otherwise display website name, bloginfo( ‘name’ ); <br/>
+* then display Tagline if required, bloginfo( ‘description’ ); <br/>
 * display contact button only if it's required, <br/>
 * the menu is displayed dynamically with wp_nav_menu(array('theme_location'=>'primary')); <br/>
 * fix the header with css if required, <br/>
