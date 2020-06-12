@@ -49,8 +49,10 @@ Redux::setSection($opt_name, array(
     )
 );
 
+
+// $gallery_array = explode(',', $opt_name['custom_logo_gallery']); 
 Redux::setSection($opt_name, array(
-    'id'       => 'custom_logo',
+    'id'       => 'custom_logo_section',
     'type'     => 'section',
     'title'    => __('Logo', 'redux-framework-demo'), 
     'subtitle' => __('Select or upload a image for you logo', 'gitema'),
@@ -58,36 +60,16 @@ Redux::setSection($opt_name, array(
     'icon' => 'el el-picture',
     'fields' => array(
         array(
-            'id'       => 'custom_logo_gallery',
-            'type'     => 'gallery',
-            'title'    => __('Logo', 'redux-framework-demo'), 
-            'subtitle' => __('Select or upload a image for you logo', 'gitema'),
-            'desc'     => __('This image will show on your navbar', 'gitema'),
+            'id'       => 'custom_logo',
+            'type'     => 'media', 
+            // 'title'    => __('Logo', 'redux-framework-demo'),
+            // 'subtitle' => __('Select or upload a image for you logo', 'gitema'),
+            'library_filter' => array(
+                'jpg'
+            )
         ),
-        array(
-            'id' => 'selected_logo',
-            'type' => 'image-select',
-            'title' => __( 'Select a image' , 'redux_docs_generator' ),
-            'desc' => __( 'This image will show on the navbar' , 'redux_docs_generator' ),
-            'class' => 'logo',
-            // 'options'  => array(
-            //     '1'      => array(
-            //         'alt'   => '1 Column', 
-            //         'img'   => $opt_name['custom_logo_gallery']
-            //     ),
-            //     '2'      => array(
-            //         'alt'   => '2 Column Left', 
-            //         'img'   => $opt_name['custom_logo_gallery']
-            //     ),
-            //     '3'      => array(
-            //         'alt'   => '2 Column Right', 
-            //         'img'  => $opt_name['custom_logo_gallery']
-            //     ),
-            // ),
-            // 'default' => '1'
-        )   )
     )  
-    
+    )
 );
 
 
