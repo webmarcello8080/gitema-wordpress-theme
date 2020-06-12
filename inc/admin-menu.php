@@ -50,7 +50,7 @@ Redux::setSection($opt_name, array(
 );
 
 
-// $gallery_array = explode(',', $opt_name['custom_logo_gallery']); 
+
 Redux::setSection($opt_name, array(
     'id'       => 'custom_logo_section',
     'type'     => 'section',
@@ -62,8 +62,6 @@ Redux::setSection($opt_name, array(
         array(
             'id'       => 'custom_logo',
             'type'     => 'media', 
-            // 'title'    => __('Logo', 'redux-framework-demo'),
-            // 'subtitle' => __('Select or upload a image for you logo', 'gitema'),
             'library_filter' => array(
                 'jpg'
             )
