@@ -84,10 +84,18 @@ class GitemaForm {
                             'img'   => ReduxFramework::$_url.'assets/img/left-arrow.png'
                         ),
                         '2'      => array(
+                            'alt'   => 'Logo on the Center', 
+                            'img'  => ReduxFramework::$_url.'assets/img/center-arrow.png'
+                        ),
+                        '3'      => array(
+                            'alt'   => 'Logo on the Rigth', 
+                            'img'  => ReduxFramework::$_url.'assets/img/right-arrow.png'
+                        ),
+                        '4'      => array(
                             'alt'   => 'Logo on the Top', 
                             'img'   => ReduxFramework::$_url.'assets/img/top-arrow.png'
                         ),
-                        '3'      => array(
+                        '5'      => array(
                             'alt'   => 'Logo on the Bottom', 
                             'img'  => ReduxFramework::$_url.'assets/img/bottom-arrow.png'
                         )
