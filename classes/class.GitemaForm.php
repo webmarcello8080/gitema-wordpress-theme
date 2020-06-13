@@ -75,29 +75,28 @@ class GitemaForm {
                     'type'     => 'image_select',
                     'title'    => __('Logo Position', 'gitema'), 
                     'subtitle' => __('Select the position of the Logo in the header.', 'gitema'),
-                    'desc'     => __('Marcelo, Lets use those for now... Can you find the icons', 'gitema'),
                     'width' => '64px',
                     'height' => '64px',
                     'options'  => array(
                         '1'      => array(
                             'alt'   => 'Logo on the Left', 
-                            'img'   => ReduxFramework::$_url.'assets/img/left-arrow.png'
+                            'img'   => GITEMA_URL . '/assets/img/left-arrow.png'
                         ),
                         '2'      => array(
                             'alt'   => 'Logo on the Center', 
-                            'img'  => ReduxFramework::$_url.'assets/img/center-arrow.png'
+                            'img'  => GITEMA_URL . '/assets/img/center-arrow.png'
                         ),
                         '3'      => array(
                             'alt'   => 'Logo on the Rigth', 
-                            'img'  => ReduxFramework::$_url.'assets/img/right-arrow.png'
+                            'img'  => GITEMA_URL . '/assets/img/right-arrow.png'
                         ),
                         '4'      => array(
                             'alt'   => 'Logo on the Top', 
-                            'img'   => ReduxFramework::$_url.'assets/img/top-arrow.png'
+                            'img'   => GITEMA_URL . '/assets/img/top-arrow.png'
                         ),
                         '5'      => array(
                             'alt'   => 'Logo on the Bottom', 
-                            'img'  => ReduxFramework::$_url.'assets/img/bottom-arrow.png'
+                            'img'  => GITEMA_URL . '/assets/img/bottom-arrow.png'
                         )
                     ),
                     'default' => '2'
