@@ -1,4 +1,7 @@
 header#header_option_2 {
+  @include mobile {
+    display: none;
+  }
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -20,6 +23,12 @@ header#header_option_2 {
     width: 2rem;
     height: auto;
     margin-right: auto;
+  }
+
+  .h1-logo {
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 3rem;
   }
 
   .nav__links {

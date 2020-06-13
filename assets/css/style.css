@@ -86,6 +86,9 @@ header#header_option_1 {
     cursor: pointer;
     width: 2rem;
     height: auto; }
+  header#header_option_1 .h1-logo {
+    font-size: 3rem;
+    cursor: pointer; }
   header#header_option_1 .nav__links {
     list-style: none; }
   header#header_option_1 .nav__links li {
@@ -111,6 +114,9 @@ header#header_option_2 {
   align-items: center;
   padding: 30px 10%;
   background-color: #24225a; }
+  @media (max-width: 767px) {
+    header#header_option_2 {
+      display: none; } }
   header#header_option_2 li,
   header#header_option_2 a,
   header#header_option_2 button {
@@ -124,6 +130,10 @@ header#header_option_2 {
     width: 2rem;
     height: auto;
     margin-right: auto; }
+  header#header_option_2 .h1-logo {
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 3rem; }
   header#header_option_2 .nav__links {
     list-style: none; }
   header#header_option_2 .nav__links li {
@@ -165,6 +175,12 @@ header#header_option_3 {
     cursor: pointer;
     width: 2rem;
     height: auto; }
+  header#header_option_3 .h1-logo {
+    width: 20%;
+    order: 2;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 3rem; }
   header#header_option_3 .nav {
     width: 40%;
     order: 1; }
