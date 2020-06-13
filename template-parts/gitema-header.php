@@ -7,7 +7,7 @@ Teo:<br/>
 * fix the header with css if required, <br/>
 * don't worry about header background... we will do it later in dynamic CSS <br/>
 thanks.
-<header id="header_option_2">
+<header id="header_option_1">
         <img src="<?php echo $gitema['custom-logo']['url'] ?>" alt="" />
     <nav>
         <?php wp_nav_menu(array('theme_location'=>'primary')); ?>

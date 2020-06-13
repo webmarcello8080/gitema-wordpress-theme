@@ -1,4 +1,5 @@
 <?php global $gitema; ?>
+
   <div class="container">
         <?php for( $i = 1; $i <= $gitema['footer-section-number']; $i++) { ?>
             <div class="footer-section" >
