@@ -1,7 +1,6 @@
-header#header_option_3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// Logo Top
+
+header#header_option_4 {
   padding: 30px 10%;
   background-color: #24225a;
 
@@ -14,33 +13,17 @@ header#header_option_3 {
     text-decoration: none;
   }
 
-  .logo,
-  .custom-logo {
-    width: 20%;
-    order: 2;
-    margin: 0 auto;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .logo {
     cursor: pointer;
     width: 2rem;
     height: auto;
-  }
-
-  .h1-logo {
-    width: 20%;
-    order: 2;
-    margin: 0 auto;
-    cursor: pointer;
-    font-size: 3rem;
-  }
-
-  .nav {
-    width: 40%;
-    order: 1;
-  }
-
-  .cta {
-    text-align: center;
-    width: 40%;
-    order: 3;
   }
 
   .nav__links {
@@ -49,11 +32,7 @@ header#header_option_3 {
 
   .nav__links li {
     display: inline-block;
-    padding: 0px 20px;
-  }
-
-  .nav__links li:nth-child(1) {
-    padding: 0 20px 0 0;
+    padding-right: 20px;
   }
 
   .nav__links li a {
@@ -65,7 +44,6 @@ header#header_option_3 {
   }
 
   button {
-    margin-left: 20px;
     padding: 9px 25px;
     background-color: rgba(0, 1136, 169, 1);
     border: none;

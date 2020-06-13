@@ -78,23 +78,23 @@ class GitemaForm {
                     'width' => '64px',
                     'height' => '64px',
                     'options'  => array(
-                        '1'      => array(
+                        'left'      => array(
                             'alt'   => 'Logo on the Left', 
                             'img'   => GITEMA_URL . '/assets/img/left-arrow.png'
                         ),
-                        '2'      => array(
+                        'center'      => array(
                             'alt'   => 'Logo on the Center', 
                             'img'  => GITEMA_URL . '/assets/img/center-arrow.png'
                         ),
-                        '3'      => array(
+                        'right'      => array(
                             'alt'   => 'Logo on the Rigth', 
                             'img'  => GITEMA_URL . '/assets/img/right-arrow.png'
                         ),
-                        '4'      => array(
+                        'top'      => array(
                             'alt'   => 'Logo on the Top', 
                             'img'   => GITEMA_URL . '/assets/img/top-arrow.png'
                         ),
-                        '5'      => array(
+                        'bottom'      => array(
                             'alt'   => 'Logo on the Bottom', 
                             'img'  => GITEMA_URL . '/assets/img/bottom-arrow.png'
                         )
@@ -127,6 +127,12 @@ class GitemaForm {
                     'type'     => 'text',
                     'title'    => __('Contact Button Link', 'gitema'),
                     'subtitle' => __('Where the Contact Button on header leads.', 'gitema'),
+            ),
+            array(
+                    'id'       => 'contact-button-text',
+                    'type'     => 'text',
+                    'title'    => __('Contact Button Text', 'gitema'),
+                    'subtitle' => __('Text inside the Contact Button.', 'gitema'),
                 )
         );
 

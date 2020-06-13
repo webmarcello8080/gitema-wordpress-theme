@@ -1,4 +1,3 @@
-<?php global $gitema; ?>
 Teo:<br/>
 * display logo only if it's loaded, otherwise display website name, bloginfo( ‘name’ ); <br/>
 * then display Tagline if required, bloginfo( ‘description’ ); <br/>
@@ -8,11 +7,13 @@ Teo:<br/>
 * don't worry about header background... we will do it later in dynamic CSS <br/>
 thanks.
 <header id="header_option_1">
-        <img src="<?php echo $gitema['custom-logo']['url'] ?>" alt="" />
+
+    <div class="logo-wrapper" >
+        <?= GitemaHeader::logo(); ?>
+    </div>
+
     <nav>
         <?php wp_nav_menu(array('theme_location'=>'primary')); ?>
     </nav>
-    <a class="cta" href="<?= $gitema['contact-button-link'] ?>">
-    <button>Contact</button>
-    </a>
+    <?= GitemaHeader::contact(); ?>
 </header>

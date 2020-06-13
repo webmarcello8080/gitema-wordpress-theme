@@ -6,7 +6,7 @@
 class GitemaSeo {
 
     // display title based on page type
-    public static function gitemaTitle(){
+    public static function title(){
         if (  is_home() || is_front_page() ) {
             return $title = get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description' );
         }
@@ -16,7 +16,7 @@ class GitemaSeo {
     }
 
     // display description based on page
-    public static function gitemaMetaDescription(){
+    public static function metaDescription(){
         if (  is_single() || is_page() ) {
             return $description = wp_strip_all_tags( get_the_excerpt(), true );
         }
