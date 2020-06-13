@@ -23,7 +23,8 @@ Redux::setSection($opt_name, array(
 Redux::setSection($opt_name, array(
     'title' => esc_html__('Homepage', 'gitema') ,
     'id' => esc_html__('gitema-homepage', ' gitema') ,
-    'icon' => 'el el-home-alt'
+    'icon' => 'el el-home-alt',
+    'fields' => GitemaForm::homepage(),
     )
 );
 
@@ -45,8 +46,7 @@ Redux::setSection($opt_name, array(
 Redux::setSection($opt_name, array(
     'title' => esc_html__('Social Network', 'gitema') ,
     'id' => esc_html__('gitema-social-network', ' gitema') ,
-    'icon' => 'el el-network',
-    'fields' => GitemaForm::seo(),
+    'icon' => 'el el-network'
     )
 );
 

@@ -139,6 +139,29 @@ class GitemaForm {
         return $headerForm;
     }
 
+    public static function homepage(){
+
+        $homepageForm = array(
+            array(
+                'id'      => 'homepage-element',
+                'type'    => 'sorter',
+                'title'   => 'Homepage Layout Manager',
+                'desc'    => 'Organize how you want the layout to appear on the homepage',
+                'options' => array(
+                    'enabled'  => array(
+                        'introduction' => 'Introduction Section',
+                        'blog'     => 'Blog Section',
+                        'services'   => 'Services'
+                    ),
+                    'disabled' => array(
+                    )
+                ),
+            )
+        );
+
+        return  $homepageForm;
+    }
+
     public static function footer(){
 
         $footerForm = array(
