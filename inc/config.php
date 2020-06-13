@@ -21,6 +21,4 @@ foreach ( glob( GITEMA_PATH .'/classes/*.php') as $filename)
     include_once $filename;
 }
 
-require GITEMA_PATH . '/inc/unqueue-files.php';
-require GITEMA_PATH . '/inc/cleanup-html.php';
 require GITEMA_PATH . '/inc/admin-menu.php';

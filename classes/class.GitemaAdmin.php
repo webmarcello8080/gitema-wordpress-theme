@@ -6,6 +6,7 @@
 class GitemaAdmin {
 
     public function __construct(){
+        new GitemaHtml;
         
         // Set widget areas
         add_action('widgets_init', array( $this, 'widgetSetup' ));
@@ -28,6 +29,7 @@ class GitemaAdmin {
     */
     public function widgetSetup() {
         
+        // define widget area for sidebar
         register_sidebar( 
             array(
                 'name' => 'Sidebar',
@@ -40,6 +42,50 @@ class GitemaAdmin {
                 'after_title'   => '</h1>',
             )
         );
+
+        // First footer widget area, located in the footer. Empty by default.
+        register_sidebar( array(
+            'name' => __( 'First Footer Widget Area', 'gitema' ),
+            'id' => 'footer-section-1',
+            'description' => __( 'The first footer widget area', 'gitema' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
+        ) );
+    
+        // Second Footer Widget Area, located in the footer. Empty by default.
+        register_sidebar( array(
+            'name' => __( 'Second Footer Widget Area', 'gitema' ),
+            'id' => 'footer-section-2',
+            'description' => __( 'The second footer widget area', 'gitema' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
+        ) );
+    
+        // Third Footer Widget Area, located in the footer. Empty by default.
+        register_sidebar( array(
+            'name' => __( 'Third Footer Widget Area', 'gitema' ),
+            'id' => 'footer-section-3',
+            'description' => __( 'The third footer widget area', 'gitema' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
+        ) );
+    
+        // Fourth Footer Widget Area, located in the footer. Empty by default.
+        register_sidebar( array(
+            'name' => __( 'Fourth Footer Widget Area', 'gitema' ),
+            'id' => 'footer-section-4',
+            'description' => __( 'The fourth footer widget area', 'gitema' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
+        ) );
     }
 
     /*
