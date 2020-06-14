@@ -24,6 +24,10 @@ class GitemaBlog {
             $gitemaInfo .= self::author();
         }
 
+        if( $gitema['blog-date'] ){
+            $gitemaInfo .= self::date();
+        }
+
         if( $gitema['blog-comment'] ){
             $gitemaInfo .= self::comment();
         }
@@ -46,6 +50,13 @@ class GitemaBlog {
         return $gitemaAuthor;
     }
 
+    // display the post author
+    public static function date(){
+        $gitemaDate = '<span class="entry-date">' . get_the_date() . '</span>';
+
+        return $gitemaDate;
+    }
+
     // display the post number of comments
     public static function comment(){
         global $gitema;
@@ -65,7 +76,7 @@ class GitemaBlog {
         return $gitemaCategory;
     }
 
-    // display the post categories with link
+    // display the post tags with link
     public static function tags(){
         global $gitema;
 
@@ -76,14 +87,20 @@ class GitemaBlog {
         return $gitemaTags;
     }
 
-    // display the post categories with link
+    // display the post iamges
     public static function image(){
         global $gitema;
+        global $post_id;
 
+        $gitemaImage = '';
         if( $gitema['blog-image'] ){
-            return the_post_thumbnail( $gitema['blog-image-size'] );
+            if ( has_post_thumbnail() ){
+                $gitemaImage = '<a href="' . get_permalink() . '" title="' . esc_attr( get_the_title()) . '" >';
+                $gitemaImage .= get_the_post_thumbnail( $post_id , $gitema['blog-image-size'] );
+                $gitemaImage .= '</a>';
+            }
         }
 
-        return '';
+        return $gitemaImage;
     }
 }

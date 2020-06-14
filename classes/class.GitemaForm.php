@@ -194,6 +194,13 @@ class GitemaForm {
                     'default'  => '1'// 1 = on | 0 = off
             ),
             array(
+                    'id'       => 'blog-date',
+                    'type'     => 'switch',
+                    'title'    => __('Post Date in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Date in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
                     'id'       => 'blog-comment',
                     'type'     => 'switch',
                     'title'    => __('Post Comment number in Blog Page', 'gitema'), 

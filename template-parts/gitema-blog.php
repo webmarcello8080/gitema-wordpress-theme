@@ -5,7 +5,12 @@
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 
-        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <h1 class="entry-title">
+            <a href="<?= get_permalink() ?>">
+                <?php the_title(); ?>
+            </a>
+        </h1>
+        
         
         <div class="entry-info">
             <?= GitemaBlog::info(); ?>
