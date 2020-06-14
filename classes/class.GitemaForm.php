@@ -162,6 +162,113 @@ class GitemaForm {
         return  $homepageForm;
     }
 
+    public static function blog(){
+
+        $blogForm = array(
+            array(
+                    'id'       => 'blog-sidebar',
+                    'type'     => 'switch',
+                    'title'    => __('Sidebar in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the sidebar in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-excerpt',
+                    'type'     => 'switch',
+                    'title'    => __('Excerpt in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the excerpt in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-read-more',
+                    'type'     => 'text',
+                    'title'    => __('Read More Text', 'gitema'),
+                    'subtitle' => __('This is the text of the link that appears after excerpt.', 'gitema'),
+                    'default'  => 'Read More'
+            ),
+            array(
+                    'id'       => 'blog-author',
+                    'type'     => 'switch',
+                    'title'    => __('Post Author in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Author in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-comment',
+                    'type'     => 'switch',
+                    'title'    => __('Post Comment number in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Comment number in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-no-comment-text',
+                    'type'     => 'text',
+                    'title'    => __('No Comments Text', 'gitema'),
+                    'subtitle' => __('This is the text that appears in case of no comment in the post.', 'gitema'),
+                    'default'  => 'No Comment yet'
+            ),
+            array(
+                    'id'       => 'blog-one-comment-text',
+                    'type'     => 'text',
+                    'title'    => __('One Comment Text', 'gitema'),
+                    'subtitle' => __('This is the text that appears in case of one comment in the post.', 'gitema'),
+                    'default'  => '1 Comment'
+            ),
+            array(
+                    'id'       => 'blog-more-comment-text',
+                    'type'     => 'text',
+                    'title'    => __('More than one Comment Text', 'gitema'),
+                    'subtitle' => __('This is the text that appears in case of more than one comment in the post.', 'gitema'),
+                    'default'  => 'Comments'
+            ),
+            array(
+                    'id'       => 'blog-categories',
+                    'type'     => 'switch',
+                    'title'    => __('Post Categories in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Categories in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-tags',
+                    'type'     => 'switch',
+                    'title'    => __('Post Tags in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Tags in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-categories-tags-separator',
+                    'type'     => 'text',
+                    'title'    => __('Categories and Tags Separator', 'gitema'),
+                    'subtitle' => __('This appears between Categories and between Tags in Blog page .', 'gitema'),
+                    'default'  => ' - '
+            ),
+            array(
+                    'id'       => 'blog-image',
+                    'type'     => 'switch',
+                    'title'    => __('Post Featured Image in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Featured Image in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-image-size',
+                    'type'     => 'select',
+                    'title'    => __('Post Featured Image Size in Blog Page', 'redux-framework-demo'), 
+                    'subtitle' => __('Choose the Post Featured Image Size in Blog page', 'redux-framework-demo'),
+                    // Must provide key => value pairs for select options
+                    'options'  => array(
+                        'thumbnail' => 'Thumbnail',
+                        'medium' => 'Medium',
+                        'medium_large' => 'Medium Large',
+                        'large' => 'Large',
+                        'full' => 'Full'
+                    ),
+                    'default'  => 'medium',
+                )
+        );
+
+        return  $blogForm;
+    }
+
     public static function footer(){
 
         $footerForm = array(

@@ -31,7 +31,15 @@ Redux::setSection($opt_name, array(
 Redux::setSection($opt_name, array(
     'title' => esc_html__('Blog', 'gitema') ,
     'id' => esc_html__('gitema-blog', ' gitema') ,
-    'icon' => 'el el-wordpress'
+    'icon' => 'el el-wordpress',
+    'fields' => GitemaForm::blog(),
+    )
+);
+
+Redux::setSection($opt_name, array(
+    'title' => esc_html__('Article', 'gitema') ,
+    'id' => esc_html__('gitema-article', ' gitema') ,
+    'icon' => 'el el-tasks'
     )
 );
 
