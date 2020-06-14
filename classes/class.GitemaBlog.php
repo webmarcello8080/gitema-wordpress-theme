@@ -62,6 +62,7 @@ class GitemaBlog {
         global $gitema;
 
         $gitemaComment = '<span class="entry-comment">' . get_comments_number_text($gitema['blog-no-comment-text'], $gitema['blog-one-comment-text'], $gitema['blog-more-comment-text']) . '</span>';
+        
         return $gitemaComment;
     }
 
@@ -95,9 +96,11 @@ class GitemaBlog {
         $gitemaImage = '';
         if( $gitema['blog-image'] ){
             if ( has_post_thumbnail() ){
+
                 $gitemaImage = '<a href="' . get_permalink() . '" title="' . esc_attr( get_the_title()) . '" >';
                 $gitemaImage .= get_the_post_thumbnail( $post_id , $gitema['blog-image-size'] );
                 $gitemaImage .= '</a>';
+
             }
         }
 

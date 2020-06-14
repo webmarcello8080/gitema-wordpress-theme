@@ -173,6 +173,26 @@ class GitemaForm {
                     'default'  => '1'// 1 = on | 0 = off
             ),
             array(
+                    'id'       => 'blog-author',
+                    'type'     => 'switch',
+                    'title'    => __('Post Author in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Author in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'blog-date',
+                    'type'     => 'switch',
+                    'title'    => __('Post Date in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Date in Blog page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                'id' => 'blog-excerpt-section',
+                'type' => 'section',
+                'title' => __('Post Excerpt', 'gitema'),
+                'indent' => true 
+            ),
+            array(
                     'id'       => 'blog-excerpt',
                     'type'     => 'switch',
                     'title'    => __('Excerpt in Blog Page', 'gitema'), 
@@ -187,18 +207,15 @@ class GitemaForm {
                     'default'  => 'Read More'
             ),
             array(
-                    'id'       => 'blog-author',
-                    'type'     => 'switch',
-                    'title'    => __('Post Author in Blog Page', 'gitema'), 
-                    'subtitle'     => __('Display the Post Author in Blog page.', 'gitema'),
-                    'default'  => '1'// 1 = on | 0 = off
+                'id'     => 'blog-excerpt-section-end',
+                'type'   => 'section',
+                'indent' => false,
             ),
             array(
-                    'id'       => 'blog-date',
-                    'type'     => 'switch',
-                    'title'    => __('Post Date in Blog Page', 'gitema'), 
-                    'subtitle'     => __('Display the Post Date in Blog page.', 'gitema'),
-                    'default'  => '1'// 1 = on | 0 = off
+                'id' => 'blog-comment-section',
+                'type' => 'section',
+                'title' => __('Post Comment', 'gitema'),
+                'indent' => true 
             ),
             array(
                     'id'       => 'blog-comment',
@@ -229,6 +246,17 @@ class GitemaForm {
                     'default'  => 'Comments'
             ),
             array(
+                'id'     => 'blog-comment-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+            array(
+                'id' => 'blog-categories-section',
+                'type' => 'section',
+                'title' => __('Post Categories Tags', 'gitema'),
+                'indent' => true 
+            ),
+            array(
                     'id'       => 'blog-categories',
                     'type'     => 'switch',
                     'title'    => __('Post Categories in Blog Page', 'gitema'), 
@@ -248,6 +276,17 @@ class GitemaForm {
                     'title'    => __('Categories and Tags Separator', 'gitema'),
                     'subtitle' => __('This appears between Categories and between Tags in Blog page .', 'gitema'),
                     'default'  => ' - '
+            ),
+            array(
+                'id'     => 'blog-categories-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+            array(
+                'id' => 'blog-image-section',
+                'type' => 'section',
+                'title' => __('Post Image', 'gitema'),
+                'indent' => true 
             ),
             array(
                     'id'       => 'blog-image',
@@ -270,11 +309,111 @@ class GitemaForm {
                         'full' => 'Full'
                     ),
                     'default'  => 'medium',
-                )
+                ),
+            array(
+                'id'     => 'blog-image-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
         );
 
         return  $blogForm;
     }
+
+    public static function post(){
+
+        $postForm = array(
+            array(
+                    'id'       => 'post-sidebar',
+                    'type'     => 'switch',
+                    'title'    => __('Sidebar in Post Page', 'gitema'), 
+                    'subtitle'     => __('Display the sidebar in Post page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'post-author',
+                    'type'     => 'switch',
+                    'title'    => __('Post Author in Post Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Author in Post page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'post-date',
+                    'type'     => 'switch',
+                    'title'    => __('Post Date in Post Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Date in Post page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                'id' => 'post-categories-section',
+                'type' => 'section',
+                'title' => __('Post Categories Tags', 'gitema'),
+                'indent' => true 
+            ),
+            array(
+                    'id'       => 'post-categories',
+                    'type'     => 'switch',
+                    'title'    => __('Post Categories in Blog Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Categories in Post page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'post-tags',
+                    'type'     => 'switch',
+                    'title'    => __('Post Tags in Post Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Tags in Post page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'post-categories-tags-separator',
+                    'type'     => 'text',
+                    'title'    => __('Categories and Tags Separator', 'gitema'),
+                    'subtitle' => __('This appears between Categories and between Tags in Post page .', 'gitema'),
+                    'default'  => ' - '
+            ),
+            array(
+                'id'     => 'post-categories-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+            array(
+                'id' => 'post-image-section',
+                'type' => 'section',
+                'title' => __('Post Image', 'gitema'),
+                'indent' => true 
+            ),
+            array(
+                    'id'       => 'post-image',
+                    'type'     => 'switch',
+                    'title'    => __('Post Featured Image in Post Page', 'gitema'), 
+                    'subtitle'     => __('Display the Post Featured Image in Post page.', 'gitema'),
+                    'default'  => '1'// 1 = on | 0 = off
+            ),
+            array(
+                    'id'       => 'post-image-size',
+                    'type'     => 'select',
+                    'title'    => __('Post Featured Image Size in Post Page', 'redux-framework-demo'), 
+                    'subtitle' => __('Choose the Post Featured Image Size in Post page', 'redux-framework-demo'),
+                    // Must provide key => value pairs for select options
+                    'options'  => array(
+                        'thumbnail' => 'Thumbnail',
+                        'medium' => 'Medium',
+                        'medium_large' => 'Medium Large',
+                        'large' => 'Large',
+                        'full' => 'Full'
+                    ),
+                    'default'  => 'medium',
+                ),
+            array(
+                'id'     => 'post-image-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+        );
+
+        return  $postForm;
+    }
+
 
     public static function footer(){
 
