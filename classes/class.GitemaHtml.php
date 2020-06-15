@@ -28,8 +28,8 @@ class GitemaHtml {
     */
     public function unqueue_script(){
 
-        wp_enqueue_style( 'custom_style', GITEMA_CSS_URL . '/style.css' , array(), GITEMA_VERSION, 'all' );
         wp_enqueue_style( 'dynamic_style', GITEMA_CSS_URL . '/dynamic.css' , array(), GITEMA_VERSION, 'all' );
+        wp_enqueue_style( 'custom_style', GITEMA_CSS_URL . '/style.css' , array(), GITEMA_VERSION, 'all' );
         wp_enqueue_script( 'custom_script', GITEMA_JS_URL . '/script.js', array(), GITEMA_VERSION, true );
 
     }
