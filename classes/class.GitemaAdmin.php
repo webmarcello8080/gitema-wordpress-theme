@@ -20,8 +20,9 @@ class GitemaAdmin {
         // Remove sections from Customise part
         add_action( 'customize_register', array( $this, 'removeSections' ) );
         
-        // Add custom logo support
-        add_action( 'after_setup_theme', array( $this, 'gitema_custom_logo' )  );
+        // Compile dynamic CSS using redux framework
+        add_filter('redux/options/gitema/compiler', array( $this, 'compilerDynamicCss' ) , 10, 4);
+
     }
 
     /*
@@ -112,14 +113,25 @@ class GitemaAdmin {
 
     }
 
-    public function gitema_custom_logo(){
-        $defaults = array(
-            'height'=> 100,
-            'width' => 100,
-            'flex-height'=> true,
-            'flex-width' => true,
-            'header-text' => array('site-title', 'site-description'),
-        );
-        add_theme_support( 'custom-logo', $defaults );
+    /*
+    * Create dynamic CSS in '/assets/css/dynamic.css' based on form values
+    */
+    public function compilerDynamicCss($options, $css, $changed_values) {
+        global $wp_filesystem;
+
+        $filename = GITEMA_PATH . '/assets/css/dynamic.css';
+
+        if( empty( $wp_filesystem ) ) {
+            require_once( ABSPATH .'/wp-admin/includes/file.php' );
+            WP_Filesystem();
+        }
+
+        if( $wp_filesystem ) {
+            $wp_filesystem->put_contents(
+                $filename,
+                $css,
+                FS_CHMOD_FILE // predefined mode settings for WP files
+            );
+        }
     }
 }

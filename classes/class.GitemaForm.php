@@ -12,15 +12,14 @@ class GitemaForm {
                 'id'       => 'body-background',
                 'type'     => 'background',
                 'title'    => __('Body Background', 'gitema'),
-                'subtitle'     => __('This part defines the body background.', 'gitema'),
-                'default'  => array(
-                    'background-color' => '#1e73be',
-                    )
+                'compiler' => array('body'),
+                'subtitle'     => __('This part defines the body background.', 'gitema')
                 ),
             array(
                     'id'          => 'header-typography',
                     'type'        => 'typography', 
                     'title'       => __('Header Typography', 'gitema'),
+                    'compiler' => array('h1','h2','h3','h4','h5','h6'),
                     'google'      => false, 
                     'font-backup' => true,
                     'units'       =>'px',
@@ -37,6 +36,7 @@ class GitemaForm {
                     'id'          => 'body-typography',
                     'type'        => 'typography', 
                     'title'       => __('Body Typography', 'gitema'),
+                    'compiler' => array('body'),
                     'google'      => false, 
                     'font-backup' => true,
                     'units'       =>'px',
@@ -45,9 +45,8 @@ class GitemaForm {
                         'color'       => '#333', 
                         'font-style'  => '400', 
                         'font-family' => 'Abel', 
-                        'google'      => true,
                         'font-size'   => '15px', 
-                        'line-height' => '40'
+                        'line-height' => '20px'
                     ),
                 ),
         );
@@ -60,7 +59,8 @@ class GitemaForm {
         $headerForm = array(
             array(
                 'id'       => 'header-background',
-                'type'     => 'background', 
+                'type'     => 'background',
+                'compiler' => array('header'),
                 'title'    => __('Header Background', 'gitema'),
                 'subtitle'     => __('This part defines the header background.', 'gitema'),
                 ),
@@ -99,7 +99,7 @@ class GitemaForm {
                             'img'  => GITEMA_URL . '/assets/img/bottom-arrow.png'
                         )
                     ),
-                    'default' => '2'
+                    'default' => 'left'
                 ),
             array(
                     'id'       => 'fixed-header',
@@ -133,6 +133,7 @@ class GitemaForm {
                     'type'     => 'text',
                     'title'    => __('Contact Button Text', 'gitema'),
                     'subtitle' => __('Text inside the Contact Button.', 'gitema'),
+                    'default'  => 'Contact'
                 )
         );
 

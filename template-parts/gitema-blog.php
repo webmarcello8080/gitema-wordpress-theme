@@ -11,7 +11,6 @@
             </a>
         </h1>
         
-        
         <div class="entry-info">
             <?= GitemaBlog::info(); ?>
         </div>
