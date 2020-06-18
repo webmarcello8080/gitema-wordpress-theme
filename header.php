@@ -11,8 +11,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <pre>
+    <!--<pre>
     <?php var_dump($gitema); ?>
     </pre>
+    -->
     <?php get_template_part( 'template-parts/gitema-header-' . $gitema['logo-position'] ); ?>
 
