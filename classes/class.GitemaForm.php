@@ -36,7 +36,7 @@ class GitemaForm {
                     'id'          => 'body-typography',
                     'type'        => 'typography', 
                     'title'       => __('Body Typography', 'gitema'),
-                    'compiler' => array('body'),
+                    'compiler' => array('body', 'body p'),
                     'google'      => false, 
                     'font-backup' => true,
                     'units'       =>'px',
@@ -166,6 +166,14 @@ class GitemaForm {
     public static function blog(){
 
         $blogForm = array(
+            array(
+                    'id'       => 'blog-title',
+                    'type'     => 'text',
+                    'title'    => __('Blog Header Title', 'gitema'),
+                    'subtitle' => __('This is Title of the Blog page, it appears on the top of the page.', 'gitema'),
+                    'desc'     => __('%s is swapped with the result of the Wordpress function single_cat_title()', 'gitema'),
+                    'default'  => 'Category Archives: %s'
+            ),
             array(
                     'id'       => 'blog-sidebar',
                     'type'     => 'switch',

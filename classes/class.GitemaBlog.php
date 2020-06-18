@@ -8,9 +8,12 @@ class GitemaBlog {
     // display the post except
     public static function except(){
         global $gitema;
-
-        $gitemaExcept = the_excerpt();
-        $gitemaExcept .= '<a class="entry-read-more" href="'. get_permalink() . '">' . $gitema['blog-read-more'] . '</a>';
+        
+        $gitemaExcept = '';
+        if( $gitema['blog-excerpt'] ){
+            $gitemaExcept = the_excerpt();
+            $gitemaExcept .= '<a class="entry-read-more" href="'. get_permalink() . '">' . $gitema['blog-read-more'] . '</a>';
+        }
 
         return $gitemaExcept;
     }
