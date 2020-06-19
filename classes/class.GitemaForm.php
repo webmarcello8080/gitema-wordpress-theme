@@ -329,6 +329,106 @@ class GitemaForm {
         return  $blogForm;
     }
 
+    public static function comment(){
+
+        $commentForm = array(
+            array(
+                'id' => 'comment-text-section',
+                'type' => 'section',
+                'title' => __('Comment Text', 'gitema'),
+                'indent' => true 
+            ),
+            array(
+                    'id'       => 'comment-one-text',
+                    'type'     => 'text',
+                    'title'    => __('One Comment text', 'gitema'),
+                    'subtitle' => __('This is the text that appear with only one comment on the bottom of the post.', 'gitema'),
+                    'desc'     => __('Where %1$s is the comment number and %2$s is the post title.', 'gitema'),
+                    'default'  => 'One thought on "%2$s"'
+            ),
+            array(
+                    'id'       => 'comment-more-text',
+                    'type'     => 'text',
+                    'title'    => __('More Than One Comment text', 'gitema'),
+                    'subtitle' => __('This is the text that appear with more than one comment on the bottom of the post.', 'gitema'),
+                    'desc'     => __('Where %1$s is the comment number and %2$s is the post title.', 'gitema'),
+                    'default'  => '%1$s thoughts on "%2$s"'
+            ),
+            array(
+                    'id'       => 'comment-closed-text',
+                    'type'     => 'text',
+                    'title'    => __('Comment Closed text', 'gitema'),
+                    'subtitle' => __('This is the text that appear when the comment are closed.', 'gitema'),
+                    'default'  => 'Comments are closed.'
+            ),
+            array(
+                'id'     => 'comment-text-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+            array(
+                'id' => 'comment-design-section',
+                'type' => 'section',
+                'title' => __('Comment Design', 'gitema'),
+                'indent' => true 
+            ),
+            array(
+                    'id'        => 'comment-max-depth',
+                    'type'      => 'slider',
+                    'title'     => __('Comment Max Depth', 'gitema'),
+                    'subtitle'  => __('The maximum comments depth (int).', 'gitema'),
+                    "default"   => 4,
+                    "min"       => 1,
+                    "step"      => 1,
+                    "max"       => 10,
+                    'display_value' => 'label'
+                ),
+            array(
+                    'id'       => 'comment-type',
+                    'type'     => 'select',
+                    'title'    => __('Comment Type', 'gitema'), 
+                    'subtitle' => __('Type of comments to list.', 'gitema'),
+                    'options'  => array(
+                        'all' => 'All',
+                        'comment' => 'Comment',
+                        'pingback' => 'Pingback',
+                        'trackback' => 'Trackback',
+                        'pings' => 'Pings',
+                    ),
+                    'default'  => 'all',
+                ),
+            array(
+                    'id'        => 'comment-avatar-size',
+                    'type'      => 'slider',
+                    'title'     => __('Comment Avatar Size', 'gitema'),
+                    'subtitle'  => __('Height and width dimensions of the avatar size (int).', 'gitema'),
+                    "default"   => 32,
+                    "min"       => 10,
+                    "step"      => 1,
+                    "max"       => 250,
+                    'display_value' => 'text'
+                ),
+            array(
+                    'id'       => 'comment-format',
+                    'type'     => 'select',
+                    'title'    => __('Comment Format', 'gitema'), 
+                    'subtitle' => __('How to format the comments list.', 'gitema'),
+                    'options'  => array(
+                        'html5' => 'Html5',
+                        'xhtml' => 'Xhtml'
+                    ),
+                    'default'  => 'html5',
+                ),
+            array(
+                'id'     => 'comment-design-section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+        );
+
+        return $commentForm;
+    }
+
     public static function post(){
 
         $postForm = array(

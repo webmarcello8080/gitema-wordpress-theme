@@ -48,6 +48,7 @@ Redux::setSection($opt_name, array(
     'title' => esc_html__('Comments', 'gitema') ,
     'id' => esc_html__('gitema-comment', ' gitema') ,
     'icon' => 'el el-comment-alt',
+    'fields' => GitemaForm::comment(),
     )
 );
 
