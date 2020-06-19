@@ -45,6 +45,13 @@ Redux::setSection($opt_name, array(
 );
 
 Redux::setSection($opt_name, array(
+    'title' => esc_html__('Comments', 'gitema') ,
+    'id' => esc_html__('gitema-comment', ' gitema') ,
+    'icon' => 'el el-comment-alt',
+    )
+);
+
+Redux::setSection($opt_name, array(
     'title' => esc_html__('Footer', 'gitema') ,
     'id' => esc_html__('gitema-footer', ' gitema') ,
     'icon' => 'el el-website',

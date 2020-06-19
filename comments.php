@@ -25,7 +25,7 @@ if ( post_password_required() )
                     'avatar_size' => 74,
                 ) );
             ?>
-        </ol><!-- .comment-list -->
+        </ol>
  
         <?php
             // Are there comments to navigate through?
@@ -39,7 +39,7 @@ if ( post_password_required() )
         <?php endif; // Check for comment navigation ?>
  
         <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.' , 'gitema' ); ?></p>
+            <p class="no-comments"><?php _e( 'Comments are closed.' , 'gitema' ); ?></p>
         <?php endif; ?>
  
     <?php endif; // have_comments() ?>
